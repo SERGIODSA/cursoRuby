@@ -1,0 +1,27 @@
+$font-family-base: Oxygen;
+$navbar-default-bg: white;
+$btn-primary-bg: green;
+
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
+
+@import "bootstrap-sprockets";
+
+body { 
+	padding-top: 70px; 
+}
+
+@import 'bootstrap';
+
+.navbar-inner{
+	@include box-shadow(none !important);
+	border: 0;
+}
+
+.footer{
+	margin-top: 50px;
+	color: $gray-light;
+
+	a{
+		color: $gray;
+	}
+}
