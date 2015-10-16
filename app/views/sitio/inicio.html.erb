@@ -1,3 +1,9 @@
+<% if user_signed_in? %>
+
+<h2>Bienvenido de nuevo al sistema</h2>
+
+<% else %>
+
 <div class="row">
 	<div class="col-xs-12 col-sm-4">
 		<h2>Barra de navegacion</h2>
@@ -10,8 +16,9 @@
 				<%= link_to "Enlace a Oja.la", "http://oja.la" %>
 				<%= link_to "Ruby on Rails", "http://rubyonrails.org" %>
 			</p>
-			<p><%= link_to "Registrarse", "#", :class=> "btn btn-primary btn-large" %></p>
+			<p><%= link_to "Registrarse", new_user_registration_path, :class=> "btn btn-primary btn-large" %></p>
 		</div>
 	</div>
 </div>
 		
+<% end %>

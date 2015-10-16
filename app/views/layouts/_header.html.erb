@@ -9,7 +9,7 @@
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
 	        	</button>
-	        	<a class="navbar-brand" href="#">Brand</a>
+	        	<%= link_to "Curso Ruby", root_path, :class => "navbar-brand" %>
 	        </div>
 
 	        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
@@ -18,7 +18,12 @@
 					<li><%= link_to "Acerca", acerca_path %></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><%= link_to "Iniciar Sesion", "#" %></li>
+					<% if user_signed_in? %>
+					<li><%= link_to "Perfil", edit_user_registration_path %></li>
+					<li><%= link_to "Cerrar Sesion", destroy_user_session_path, :method => :delete %></li>
+					<% else %>
+					<li><%= link_to "Iniciar Sesion", new_user_session_path %></li>
+					<% end %>
 				</ul>
 	        </div><!-- /.navbar-collapse -->
     	</div>
