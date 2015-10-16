@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
+# cowsay
+gem 'cowsay'
 # Use sqlite for local database
 group :development, :test do
 	gem 'sqlite3'
