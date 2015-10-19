@@ -2,11 +2,14 @@
 	<div class="col-sm-6 col-xs-12 col-sm-offset-3 well">
 		<strong>Descripcion:</strong>
 		<%= @pin.description %>
+		<%= @pin.created_at %>
+		Creado Por:<%= @pin.user.name %>
 	</div>
 </div>
 <div class="row">
 	<div class="col-xs-12 col-sm-9">
-		<%= link_to 'Editar', edit_pin_path(@pin) %> |
+		<% if current_user == pin.user %>
+		<%= link_to 'Editar', edit_pin_path(@pin) %> <% end %> |
 		<%= link_to 'Regresar', pins_path %>
 	</div>
 </div>
