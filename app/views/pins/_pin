@@ -1,7 +1,9 @@
 <tr>
+	<td><%= image_tag pin.image %>
     <td><%= pin.description %></td>
     <td><%= link_to 'Mostrar', pin %></td>
     <% if current_user == pin.user %>
     <td><%= link_to 'Editar', edit_pin_path(pin) %></td>
     <td><%= link_to 'Eliminar', pin, method: :delete, data: { confirm: 'Esta seguro de que quiere eliminar?' } %></td>
+    <% end %>
 </tr>
