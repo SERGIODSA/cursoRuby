@@ -5,6 +5,11 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.4'
 # cowsay
 gem 'cowsay'
+#
+gem 'faker'
+#
+gem 'will_paginate', '~> 3.0'
+gem 'bootstrap-will_paginate'
 # Use sqlite for local database
 group :development, :test do
 	gem 'sqlite3'

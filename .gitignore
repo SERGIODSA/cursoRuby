@@ -24,3 +24,4 @@ doc/
 #Ignorando las imagenes cargadas de prueba
 
 /public/system
+/recursos
